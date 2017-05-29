@@ -1,4 +1,4 @@
-export interface Stats{
+export interface Stats {
   attackRange: number;
   mpperlevel: number;
   mp: number;

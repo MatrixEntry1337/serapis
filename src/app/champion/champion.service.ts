@@ -34,6 +34,16 @@ export class ChampionService {
       .catch(this.handleError);
   }
 
+  getChampionById(champion: number): Observable<Champion> {
+    return this.http.get(this.championsUrl + champion)
+      .map(response => {
+        console.log('Retrieved Champion Data: ');
+        console.log(response.json());
+        return response.json() as Champion;
+      })
+      .catch(this.handleError);
+  }
+
   // error handler
   private handleError (error: Response | any) {
     // In a real world app, you might use a remote logging infrastructure
