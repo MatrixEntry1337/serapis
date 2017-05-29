@@ -3,7 +3,7 @@ import {Spell} from '../interface/spell';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-champion-spells',
+  selector: 'serapis-champion-spells',
   templateUrl: './champion-spells.component.html'
 })
 

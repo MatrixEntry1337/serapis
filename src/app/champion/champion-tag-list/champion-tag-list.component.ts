@@ -3,7 +3,7 @@ import {Champion} from '../interface/champion';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-champion-tag-list',
+  selector: 'serapis-champion-tag-list',
   templateUrl: 'champion-tag-list.component.html'
 })
 

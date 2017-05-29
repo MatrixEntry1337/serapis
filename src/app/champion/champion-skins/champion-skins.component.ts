@@ -4,7 +4,7 @@ import {Skin} from '../interface/skin';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-champion-skins',
+  selector: 'serapis-champion-skins',
   templateUrl: './champion-skins.component.html'
 })
 
