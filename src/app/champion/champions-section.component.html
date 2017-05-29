@@ -1,0 +1,61 @@
+<div class="margin-top-10">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="champions">
+        <h3 class="panel-title">Champions</h3>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Champs <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu list-length">
+              <li *ngFor="let champion of champions">
+                <a role="button" (click)="getChampion(champion)">{{champion.name}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="margin-top-10" *ngIf="champions">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs">
+        <li *ngFor="let championTag of championTagList; let i = index;" [ngClass]="{active: currentChampionTag === i}">
+          <a role="button" (click)="selectTag(i)">
+            {{championTag}}
+          </a></li>
+      </ul>
+      <div class="margin-top-5">
+        <app-champion-tag-list [champions]="champions"
+           [championTag]="championTagList[currentChampionTag]"
+            (notify)="getChampion($event)">
+        </app-champion-tag-list>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="margin-top-10" *ngIf="selectedChampion">
+  <div class="row">
+    <div class="col-md-4">
+      <app-champion-stats [stats]="selectedChampion.stats"></app-champion-stats>
+    </div>
+    <div class="col-md-4">
+        <app-champion-spells [spells]="selectedChampion.spells"></app-champion-spells>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12">
+          <app-champion-skins [champion]="selectedChampion"></app-champion-skins>
+        </div>
+        <div class="col-md-12">
+          <app-champion-lore [champion]="selectedChampion"></app-champion-lore>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
