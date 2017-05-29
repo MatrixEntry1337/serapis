@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ChampionsContainerComponent } from './champion/champions-section.component';
+import { ChampionContainerComponent } from './champion/champion.container';
 import { ChampionService } from './champion/champion.service';
 import { rootRouterConfig } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -16,19 +16,28 @@ import {ChampionStatsComponent} from './champion/champion-stats/champion-stats.c
 import {ChampionListComponent} from './champion/champion-list/champion-list.component';
 import {ChampionSpellsComponent} from './champion/champion-spells/champion-spells.component';
 import {TagPipe} from './pipes/tag.pipe';
+import {ItemContainerComponent} from './item/item.container.component';
+import {ItemStatsComponent} from './item/item-stats/item-stats.component';
+import {ItemListsComponent} from './item/item-lists/item-lists.component';
+import {ObjectValuesPipe} from './pipes/object-values.pipe';
+import {ItemService} from './item/item.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ChampionsContainerComponent,
+    ChampionContainerComponent,
     ChampionTagListComponent,
     ChampionLoreComponent,
     ChampionSkinsComponent,
     ChampionStatsComponent,
     ChampionListComponent,
     ChampionSpellsComponent,
-    TagPipe
+    ItemContainerComponent,
+    ItemListsComponent,
+    ItemStatsComponent,
+    TagPipe,
+    ObjectValuesPipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +46,8 @@ import {TagPipe} from './pipes/tag.pipe';
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
   ],
   providers: [
-    ChampionService
+    ChampionService,
+    ItemService
   ],
   bootstrap: [AppComponent]
 })

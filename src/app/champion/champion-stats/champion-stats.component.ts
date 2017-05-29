@@ -3,7 +3,7 @@ import {Stats} from '../interface/stat';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-champion-stats',
+  selector: 'serapis-champion-stats',
   templateUrl: './champion-stats.component.html'
 })
 export class ChampionStatsComponent implements OnInit {

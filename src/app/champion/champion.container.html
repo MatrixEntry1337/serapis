@@ -29,10 +29,10 @@
           </a></li>
       </ul>
       <div class="margin-top-5">
-        <app-champion-tag-list [champions]="champions"
+        <serapis-champion-tag-list [champions]="champions"
            [championTag]="championTagList[currentChampionTag]"
             (notify)="getChampion($event)">
-        </app-champion-tag-list>
+        </serapis-champion-tag-list>
       </div>
     </div>
   </div>
@@ -40,18 +40,18 @@
 <div class="margin-top-10" *ngIf="selectedChampion">
   <div class="row">
     <div class="col-md-4">
-      <app-champion-stats [stats]="selectedChampion.stats"></app-champion-stats>
+      <serapis-champion-stats [stats]="selectedChampion.stats"></serapis-champion-stats>
     </div>
     <div class="col-md-4">
-        <app-champion-spells [spells]="selectedChampion.spells"></app-champion-spells>
+        <serapis-champion-spells [spells]="selectedChampion.spells"></serapis-champion-spells>
     </div>
     <div class="col-md-4">
       <div class="row">
         <div class="col-md-12">
-          <app-champion-skins [champion]="selectedChampion"></app-champion-skins>
+          <serapis-champion-skins [champion]="selectedChampion"></serapis-champion-skins>
         </div>
         <div class="col-md-12">
-          <app-champion-lore [champion]="selectedChampion"></app-champion-lore>
+          <serapis-champion-lore [champion]="selectedChampion"></serapis-champion-lore>
         </div>
       </div>
     </div>

@@ -6,11 +6,11 @@ import {ChampionService} from './champion.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-champion-container',
-  templateUrl: './champions-section.component.html'
+  selector: 'serapis-champion-container',
+  templateUrl: 'champion.container.html'
 })
 
-export class ChampionsContainerComponent implements OnInit {
+export class ChampionContainerComponent implements OnInit {
   private champions: Champion[];
   private selectedChampion: Champion;
   private championTagList: string[] = ['Fighter', 'Assassin', 'Mage', 'Tank', 'Support', 'Marksman'];
@@ -22,8 +22,8 @@ export class ChampionsContainerComponent implements OnInit {
   getChampions(): void {
     this.championService.getAllChampions()
       .subscribe(champions => {
-        // console.log('Objects in ChampionsComponent: ');
-        // console.log(champions);
+        console.log('Objects in ChampionsComponent: ');
+        console.log(champions);
         this.prep(champions);
       });
   }

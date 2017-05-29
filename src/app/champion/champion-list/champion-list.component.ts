@@ -5,7 +5,7 @@ import {ChampionService} from '../champion.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-champion-list',
+  selector: 'serapis-champion-list',
   templateUrl: 'champion-list.component.html'
 })
 export class ChampionListComponent implements OnInit, OnChanges {
