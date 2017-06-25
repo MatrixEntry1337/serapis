@@ -1,4 +1,4 @@
-export interface Spell{
+export interface Spell {
   key: string;
   name: string;
   description: string;
