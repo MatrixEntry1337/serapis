@@ -1,9 +1,9 @@
-import {Spell} from './spell'
+import {Spell} from './spell';
 import {Skin} from './skin';
 import {Stats} from './stat';
 import {Info} from './info';
 
-export interface Champion{
+export interface Champion {
   id: number;
   key: string;
   title: string;

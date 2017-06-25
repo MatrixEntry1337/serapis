@@ -1,4 +1,4 @@
-export interface Info{
+export interface Info {
   defense: string;
   magic: number;
   difficulty: number;

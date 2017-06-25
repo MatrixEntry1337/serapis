@@ -1,5 +1,5 @@
-import{Champion} from './champion';
+import {Champion} from './champion';
 
-export class ChampionGroup{
+export class ChampionGroup {
   [key: string]: Champion;
 }
